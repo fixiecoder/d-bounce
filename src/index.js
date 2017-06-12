@@ -1,6 +1,6 @@
 module.exports = (() => {
   const names = {};
-  return function debounce(cb, name = 'default', timeout = 1000, args = []) {
+  return function debounce(cb, name = 'default', timeout = 300, args = []) {
     if(typeof cb !== 'function') {
       console.error('d-bounce must be given a callback function as the first agrument');
       return;
