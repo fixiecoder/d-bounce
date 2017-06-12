@@ -1,0 +1,31 @@
+{
+  "name": "d-bounce",
+  "version": "0.0.1",
+  "description": "Javascript debounce tool",
+  "main": "dist/d-bounce.js",
+  "module": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fixiecoder/d-bounce.git"
+  },
+  "keywords": [
+    "debounce",
+    "browser",
+    "node"
+  ],
+  "author": "Colin Adams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fixiecoder/d-bounce/issues"
+  },
+  "homepage": "https://github.com/fixiecoder/d-bounce#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.6.1"
+  }
+}
