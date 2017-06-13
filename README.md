@@ -4,7 +4,7 @@ Simple javascript debounce tool
 ## Getting started
 
 ```shell
-npm install d-bounce
+$ npm install d-bounce
 ```
 
 ```javascript
@@ -103,4 +103,10 @@ dBounce(callback, 'example-debounce', 1000, arguments);
  *  second arg
  *  third arg
  */
+```
+
+## Testing
+
+```shell
+$ npm test
 ```
