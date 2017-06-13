@@ -36,7 +36,7 @@ d-bounce accepts 4 arguments although only one is necessary.
 
 dBounce(`callback` [, `identifier` [, `delay` [, `arguments`]]])
 
-1. `callback` (`Function` or `null` or `undefined`) required
+### `callback` (`Function` or `null` or `undefined`) required
 
 The function that you wish to be invoked after the delay provided dBounce is not called again with the same `identifier`.
 
@@ -52,7 +52,7 @@ dBounce(null, 'example-debounce');
 // debounce will be cancelled before it invokes the callback
 ```
 
-2. `identifier` (`String`) optional default: `'default'`
+### `identifier` (`String`) optional default: `'default'`
 
 A string identifier used to associate each attempted invocation with other attempted invocations. calls to d-bounce are linked to each other by the `identifier`. This means that you could pass a different callback function every time you call dBounce, using the same `identifier`, and dBounce will reset the clock on the `delay`.
 
@@ -75,12 +75,12 @@ dBounce(() => console.log('callback 2'), 'example-debounce');
 // the the second callback that logs out 'callback 2' will be the only one that is invoked.
 ```
 
-3. `delay` (`Number`) optional - default: `300`
+### `delay` (`Number`) optional - default: `300`
 default: `300`
 
 The amount of time waited by dBounce before invoking the callback, provided debounce is not called again with the same `identifier`.
 
-4. `arguments` (`Array`) optional - default: `[]`
+### `arguments` (`Array`) optional - default: `[]`
 
 An array of arguments to be passed to the callback upon invocation.
 
