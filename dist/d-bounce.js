@@ -87,14 +87,19 @@ module.exports = function () {
   var names = {};
   return function debounce(cb) {
     var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'default';
-    var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1000;
+    var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 300;
     var args = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
 
-    if (typeof cb !== 'function') {
-      console.error('d-bounce must be given a callback function as the first agrument');
+    names[name] = names[name] || {};
+    if ((cb === undefined || cb === null) && names[name]) {
+      clearTimeout(names[name].timeout);
+      delete names[name];
       return;
     }
-    names[name] = names[name] || {};
+    if (typeof cb !== 'function') {
+      console.error('d-bounce must be given a callback function, null or undefined as the first argument');
+      return;
+    }
     clearTimeout(names[name].timeout);
     names[name].timeout = setTimeout(function () {
       cb.apply(null, args);
